@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" > -->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TableLayout
+            android:id="@+id/tablelayoutHeader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/table_style" >
+
+            <TableRow
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/tagResultHeader"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_style" >
+                <!--Number-->
+                <TextView
+                    android:id="@+id/NumberLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:minWidth="15dp"
+                    android:padding="3dp"
+                    android:text="@string/Number"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+                <!--EPC-->
+                <TextView
+                    android:id="@+id/EPCLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/EPC"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+                <!--Antenna-->
+                <TextView
+                android:id="@+id/AntennaLabel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_style"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/Antenna"
+                android:textColor="#000000"
+                android:textStyle="bold" />
+                <!--TimeStamp-->
+                <TextView
+                    android:id="@+id/TimeStampLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/TimeStamp"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+                <!--Rssi-->
+                <TextView
+                    android:id="@+id/RssiLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/Rssi"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+                <!--Frequency-->
+                <TextView
+                    android:id="@+id/FrequencyLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/Frequency"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+                <!--Phase-->
+                <TextView
+                    android:id="@+id/PhaseLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/Phase"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+                <!--ReadCount-->
+                <TextView
+                    android:id="@+id/ReadConutLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/ReadCount"
+                    android:textColor="#000000"
+                    android:textStyle="bold" />
+                <!--Gpio-->
+                <TextView
+                    android:id="@+id/GpioLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/Gpio"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+                <!--BrandIdentifier-->
+                <TextView
+                    android:id="@+id/BrandIdentifierLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/BrandIdentifier"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+                <!--Data-->
+                <TextView
+                    android:id="@+id/DataLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/Data"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+                <!--EPCMemData-->
+                <TextView
+                    android:id="@+id/EPCMemDataLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/EPCMemData"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+                <!--ReservedMemData-->
+                <TextView
+                    android:id="@+id/ReservedMemDataLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/ReservedMemData"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+                <!--UserMemData-->
+                <TextView
+                    android:id="@+id/UserMemDataLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/UserMemData"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+                <!--TIDMemData-->
+                <TextView
+                    android:id="@+id/TIDMemDataLabel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/table_style"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:text="@string/TIDMemData"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:visibility="gone"/>
+            </TableRow>
+        </TableLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            <TableLayout
+                android:id="@+id/tablelayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_style" >
+            </TableLayout>
+        </ScrollView>
+    </LinearLayout>
+
+<!-- </HorizontalScrollView> -->
