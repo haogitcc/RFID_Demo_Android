@@ -501,7 +501,7 @@ public class ServiceListener implements View.OnClickListener {
 						epcEPC = (TextView) fullRow.findViewById(R.id.EPC);
 						if (epcEPC != null) {
 							epcEPC.setText(tagRecordData.getEpcString());
-							epcEPC.setMinWidth(mReaderActivity.epcEpcWidth);
+							epcEPC.setWidth(mReaderActivity.epcEpcWidth);
 
 							epcAntenna = (TextView) fullRow.findViewById(R.id.Antenna);
 							if (epcAntenna != null) {

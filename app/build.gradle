@@ -19,8 +19,9 @@ android {
 }
 
 dependencies {
-    compile files('libs/d2xx.jar')
-    compile files('libs/jmdns-3.4.1.jar')
-    compile files('libs/ltkjava-1.0.0.6.jar')
-    compile files('libs/mercuryapi.jar')
+    implementation files('libs/1.31.3.36/d2xx.jar')
+    implementation files('libs/1.31.3.36/jmdns-3.4.1.jar')
+    implementation files('libs/1.31.3.36/ltkjava-1.0.0.6.jar')
+    implementation files('libs/1.31.3.36/mercuryapi.jar')
+
 }

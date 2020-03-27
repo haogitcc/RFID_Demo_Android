@@ -88,13 +88,13 @@ public class ReaderActivity extends Activity
 		try{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_reader);
-		
+
 		mSettingView = findViewById(R.id.settings);
 		mDisplayView = findViewById(R.id.displayView);
 
         // Initially hide the setting view.
         mSettingView.setVisibility(View.GONE);
-     
+
 		activity=this;
 		try 
 		{
@@ -208,12 +208,12 @@ public class ReaderActivity extends Activity
         epcCountWidth=(int) (windowWidth*(0.2));
 		epcDataWidth=(int) (windowWidth*(0.1));
 
-		rowNumberLabelView.setWidth(rowNumberWidth);
-		epcEpcLabelView.setWidth(epcEpcWidth);
-		epcAntLabelView.setWidth(epcAntWidth);
-		epcCountLabelView.setWidth(epcCountWidth);
-		epcDataLabelView.setWidth(epcDataWidth);
-		epcTimeLabelView.setWidth(epcTimeWidth);
+		rowNumberLabelView.setMinWidth(rowNumberWidth);
+		epcEpcLabelView.setMinWidth(epcEpcWidth);
+		epcAntLabelView.setMinWidth(epcAntWidth);
+		epcCountLabelView.setMinWidth(epcCountWidth);
+		epcDataLabelView.setMinWidth(epcDataWidth);
+		epcTimeLabelView.setMinWidth(epcTimeWidth);
 	}
 	
 	@Override
@@ -259,6 +259,7 @@ public class ReaderActivity extends Activity
 	{
 		readEditText = (CustomEditText) findViewById(R.id.search_edit_text);
 		customReaderField = (CustomEditText) findViewById(R.id.custom_reader_field);
+		customReaderField.setText("tcp://192.168.1.100:8086");
 		connectButton = (Button) findViewById(R.id.Connect_button);
 		serialReaderRadioButton = (RadioButton) findViewById(R.id.SerialReader_radio_button);
 		networkReaderRadioButton = (RadioButton) findViewById(R.id.NetworkReader_radio_button);
