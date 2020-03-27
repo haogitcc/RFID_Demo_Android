@@ -51,6 +51,7 @@ public class ReaderActivity extends Activity
 	private static Spinner serialList=null;	
 	private static Display display=null;
 	private static TextView searchResultCount = null;
+//	TagResults
 	private static TextView rowNumberLabelView = null;
 	private static TextView epcEpcLabelView = null;
 	private static TextView epcAntLabelView = null;
@@ -68,6 +69,7 @@ public class ReaderActivity extends Activity
 
 	public Reader reader=null;
 	private ReaderActivity activity;
+	public View readerConfigure;
 	public View readOptions;
 	public View performance_metrics;
 	public View firmware;
@@ -116,7 +118,8 @@ public class ReaderActivity extends Activity
 		
 		syncReadRadioButton.setOnClickListener(serviceRadioButtonListener);
 		asyncReadSearchRadioButton.setOnClickListener(serviceRadioButtonListener);
-		
+
+		//加载设置页面
 		loadSettingConntentView();
 				
 		readButton.setOnClickListener(new ServiceListener(this));
@@ -147,15 +150,17 @@ public class ReaderActivity extends Activity
 		ExpandableListView expandableList = (ExpandableListView) findViewById(R.id.expandableListView1);
 
 		LayoutInflater infalInflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		readerConfigure = infalInflater.inflate(R.layout.reader_configure, null);
 		readOptions = infalInflater.inflate(R.layout.settings_read_options, null);
 		performance_metrics = infalInflater.inflate(R.layout.performance_metrics, null);
 		firmware = infalInflater.inflate(R.layout.firmware, null);
 		ArrayList<View> ChildViews = new ArrayList<View>();
+		ChildViews.add(readerConfigure);
 		ChildViews.add(readOptions);
 		ChildViews.add(performance_metrics);
 		ChildViews.add(firmware);
 
-		String[] groups = { "Read Options", "Statistics", "Firmware" };
+		String[] groups = { "Reader Configure", "Read Options", "Statistics", "Firmware" };
 		expandableListAdapter = new ExpandableListAdapter(this, groups, ChildViews);
 
 		// Set this blank adapter to the list view

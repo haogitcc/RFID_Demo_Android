@@ -62,4 +62,45 @@
     <string name="Yes">Yes</string>
     <string name="No">No</string>
 
+    <!-- Reader Config -->
+    <string name="Region">Region</string>
+    <string name="Baudrate">Bandrate</string>
+    <string name="ReadPower">Read Power</string>
+    <string name="WritePower">Write Power</string>
+    <string name="dBm">dBm</string>
+
+    <string name="BLF">BLF</string>
+    <string name="Tari">Tari</string>
+    <string name="TagEncoding">TagEncoding</string>
+    <string name="Target">Target</string>
+    <string name="Session">Session</string>
+    <string name="Q">Q Value</string>
+
+    <string name="LINK250KHZ">250KHZ</string>
+    <string name="LINK320KHZ">320KHZ</string>
+    <string name="LINK640KHZ">640KHZ</string>
+
+    <string name="TARI_12_5US">12_5US</string>
+    <string name="TARI_25US">25US</string>
+    <string name="TARI_6_25US">6_25US</string>
+
+    <string name="FM0">FM0</string>
+    <string name="M2">M2</string>
+    <string name="M4">M4</string>
+    <string name="M8">M8</string>
+
+    <string name="A">A</string>
+    <string name="B">B</string>
+    <string name="AB">AB</string>
+    <string name="BA">BA</string>
+
+    <string name="S0">S0</string>
+    <string name="S1">S1</string>
+    <string name="S2">S2</string>
+    <string name="S3">S3</string>
+
+    <string name="DynamicQ">DynamicQ</string>
+    <string name="StaticQ">StaticQ</string>
+
+
 </resources>
