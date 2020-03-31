@@ -49,7 +49,6 @@
             android:text="@string/Enable" />
 
         <LinearLayout
-            android:id="@+id/embedded_layout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >

@@ -1,5 +1,3 @@
-package com.thingmagic.rfidreader;
-
 import java.util.ArrayList;
 
 import com.thingmagic.rfidreader.customViews.ExpandableListAdapter;

@@ -14,12 +14,10 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.wifi.WifiManager;
-import android.opengl.Visibility;
 import android.os.AsyncTask;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -27,12 +25,10 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.thingmagic.rfidreader.R;
-import com.thingmagic.rfidreader.ReaderActivity;
-import com.thingmagic.rfidreader.Listener.ServiceListener.ReadThread;
+import com.thingmagic.R;
+import com.thingmagic.rfidreader.activities.ReaderActivity;
 import com.thingmagic.rfidreader.customViews.DrawableClickListener;
 import com.thingmagic.util.LoggerUtil;
-import com.thingmagic.util.Utilities;
 
 public class ReaderSearchListener implements DrawableClickListener {
 
@@ -56,8 +52,7 @@ public class ReaderSearchListener implements DrawableClickListener {
 
 	public ReaderSearchListener(ReaderActivity readerActivity) {
 		mReaderActivity = readerActivity;
-		wifiManager = (WifiManager) mReaderActivity
-				.getSystemService(WIFI_SERVICE);
+		wifiManager = (WifiManager) mReaderActivity.getSystemService(WIFI_SERVICE);
 		readersDialog = new Dialog(mReaderActivity);
 		pDialog = new ProgressDialog(mReaderActivity);
 		pDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -80,13 +75,11 @@ public class ReaderSearchListener implements DrawableClickListener {
 	}
 
 	private void findAllViewsById() {
-		inflater = (LayoutInflater) mReaderActivity
-				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		readerssSearchView = (LinearLayout) inflater.inflate(
-				R.layout.readers_search_diolog, null, true);
+		inflater = (LayoutInflater) mReaderActivity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		readerssSearchView = (LinearLayout) inflater.inflate(R.layout.readers_search_diolog, null, true);
 		readerListView =(ListView) readerssSearchView.findViewById(R.id.readers_list);
 		ntReaderEditText = (EditText) mReaderActivity.findViewById(R.id.search_edit_text);
-		 loadingView =(ProgressBar) readerssSearchView.findViewById(R.id.loadingBar);
+		loadingView =(ProgressBar) readerssSearchView.findViewById(R.id.loadingBar);
 	}
 
 	@Override
@@ -153,8 +146,7 @@ public class ReaderSearchListener implements DrawableClickListener {
 		@Override
 		protected void onPostExecute(Map<String, String> discovedReaders) {
 			loadingView.setVisibility(View.GONE);
-			ArrayAdapter<String> adapter = new ArrayAdapter<String>(mReaderActivity,
-					android.R.layout.simple_list_item_1);
+			ArrayAdapter<String> adapter = new ArrayAdapter<String>(mReaderActivity, android.R.layout.simple_list_item_1);
 		   Set<String> readersSet = discovedReaders.keySet();
 		   if(readersSet.size()==0){
 			   adapter.add("No readers found");
@@ -167,7 +159,6 @@ public class ReaderSearchListener implements DrawableClickListener {
 		   }
 		   
 			readerListView.setAdapter(adapter);
-			
 
 			readersDialog.show();
 		}

@@ -1,5 +1,4 @@
 <TableRow xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tagResult"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/table_style" >
@@ -41,7 +40,6 @@
         android:textColor="#000000" />
     <!--RSSI-->
     <TextView
-        android:id="@+id/Rssi"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/table_style"
@@ -51,7 +49,6 @@
         android:visibility="gone"/>
     <!--Frequency-->
     <TextView
-        android:id="@+id/Frequency"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/table_style"
@@ -61,7 +58,6 @@
         android:visibility="gone"/>
     <!--Phase-->
     <TextView
-        android:id="@+id/Phase"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/table_style"
@@ -80,7 +76,6 @@
         android:textColor="#000000" />
     <!--Gpio-->
     <TextView
-        android:id="@+id/Gpio"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/table_style"
@@ -90,7 +85,6 @@
         android:visibility="gone"/>
     <!--BrandIdentifier-->
     <TextView
-        android:id="@+id/BrandIdentifier"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/table_style"
@@ -110,7 +104,6 @@
         android:visibility="gone" />
     <!--EPCMemData-->
     <TextView
-        android:id="@+id/EPCMemData"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/table_style"
@@ -120,7 +113,6 @@
         android:visibility="gone" />
     <!--ReservedMemData-->
     <TextView
-        android:id="@+id/ReservedMemData"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/table_style"
@@ -130,7 +122,6 @@
         android:visibility="gone" />
     <!--UserMemData-->
     <TextView
-        android:id="@+id/UserMemData"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/table_style"
@@ -140,7 +131,6 @@
         android:visibility="gone" />
     <!--TIDMemData-->
     <TextView
-        android:id="@+id/TIDMemData"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@drawable/table_style"

@@ -3,14 +3,14 @@ package com.thingmagic.rfidreader.services;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Spinner;
+import com.thingmagic.R;
 
 import com.thingmagic.Gen2;
 import com.thingmagic.Reader;
 import com.thingmagic.SimpleReadPlan;
 import com.thingmagic.TagOp;
 import com.thingmagic.TagProtocol;
-import com.thingmagic.rfidreader.R;
-import com.thingmagic.rfidreader.ReaderActivity;
+import com.thingmagic.rfidreader.activities.ReaderActivity;
 import com.thingmagic.util.Utilities;
 
 public class SettingsService {

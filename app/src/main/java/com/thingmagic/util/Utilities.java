@@ -1,6 +1,5 @@
 package com.thingmagic.util;
 
-
 import java.io.InputStream;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -103,8 +102,7 @@ public class Utilities {
 		try 
 		{
 			LoggerUtil.debug("Utilities", "loading log4j");
-			inputStream = context.getAssets().open(
-					"log4j.properties");
+			inputStream = context.getAssets().open("log4j.properties");
 			Properties prop = new Properties();
 			prop.load(inputStream);
 			PropertyConfigurator.configure(prop);
@@ -139,8 +137,7 @@ public class Utilities {
 				// handle obtaining focus
 				if (hasFocus) 
 				{
-					if (focusedEditText.getText().toString()
-							.equals(defaultText)) 
+					if (focusedEditText.getText().toString().equals(defaultText))
 					{
 						focusedEditText.setText(EMPTY_STRING);
 					}
@@ -148,8 +145,7 @@ public class Utilities {
 				// handle losing focus
 				else 
 				{
-					if (focusedEditText.getText().toString()
-							.equals(EMPTY_STRING)) 
+					if (focusedEditText.getText().toString().equals(EMPTY_STRING))
 					{
 						focusedEditText.setText(defaultText);
 					}
@@ -181,8 +177,7 @@ public class Utilities {
 		Class ITelephonyClass;
 		boolean enable3G = true;
 
-		TelephonyManager telephonyManager = (TelephonyManager) context
-		        .getSystemService(Context.TELEPHONY_SERVICE);
+		TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
 
 		telephonyManagerClass = Class.forName(telephonyManager.getClass().getName());
 		Method getITelephonyMethod = telephonyManagerClass.getDeclaredMethod("getITelephony");
@@ -190,8 +185,7 @@ public class Utilities {
 		ITelephonyStub = getITelephonyMethod.invoke(telephonyManager);
 		ITelephonyClass = Class.forName(ITelephonyStub.getClass().getName());
 
-		Method dataConnSwitchmethod_OFF = 
-                ITelephonyClass.getDeclaredMethod("disableDataConnectivity");
+		Method dataConnSwitchmethod_OFF = ITelephonyClass.getDeclaredMethod("disableDataConnectivity");
 		Method dataConnSwitchmethod_ON = ITelephonyClass.getDeclaredMethod("enableDataConnectivity"); 
 
 		if(enable3G){
@@ -206,16 +200,11 @@ public class Utilities {
 	public  boolean checkIfWiFiEnabled(Activity activity)  {
 		
 		boolean wifiEnabled = true;
-		final WifiManager wifiManager = (WifiManager)activity
-					.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
+		final WifiManager wifiManager = (WifiManager)activity.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
 		wifiEnabled = wifiManager.isWifiEnabled();
-		ConnectivityManager manager = (ConnectivityManager) activity
-				.getApplicationContext().getSystemService(
-						activity.CONNECTIVITY_SERVICE);
-		boolean is3g = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE)
-				.isConnectedOrConnecting();
-		boolean isWifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI)
-				.isConnectedOrConnecting();
+		ConnectivityManager manager = (ConnectivityManager) activity.getApplicationContext().getSystemService(activity.CONNECTIVITY_SERVICE);
+		boolean is3g = manager.getNetworkInfo(ConnectivityManager.TYPE_MOBILE).isConnectedOrConnecting();
+		boolean isWifi = manager.getNetworkInfo(ConnectivityManager.TYPE_WIFI).isConnectedOrConnecting();
 
 		if (!is3g && !isWifi) {
 			System.out.println("is isWifi ? "+isWifi );
@@ -234,7 +223,6 @@ public class Utilities {
 	        .setNegativeButton("No",null)
 	        .setCancelable(false)
 	        .show();
-			
 
 			System.out.println("is showing ? "+wifiAlert.isShowing() );
 //			while (wifiAlert.isShowing()){
@@ -247,7 +235,6 @@ public class Utilities {
 //				}
 //			}
 			wifiEnabled = wifiManager.isWifiEnabled();
-			
 		}
 		return wifiEnabled;
 	}
@@ -271,8 +258,7 @@ public class Utilities {
 	        .setNegativeButton("No",null)
 	        .setCancelable(false)
 	        .show();
-			Intent enableBtIntent = new Intent(
-					BluetoothAdapter.ACTION_REQUEST_ENABLE);
+			Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
 			boolean result =activity.startActivityIfNeeded(enableBtIntent, REQUEST_ENABLE_BT);
 			System.out.println("result :"+ result);
 		}

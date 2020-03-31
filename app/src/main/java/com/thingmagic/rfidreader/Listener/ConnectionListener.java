@@ -1,8 +1,5 @@
 package com.thingmagic.rfidreader.Listener;
 
-import java.net.URI;
-import java.util.Scanner;
-
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
@@ -18,14 +15,18 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TableLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.thingmagic.*;
-import com.thingmagic.rfidreader.R;
-import com.thingmagic.rfidreader.ReaderActivity;
+import com.thingmagic.R;
+import com.thingmagic.Reader;
+import com.thingmagic.util.ReaderConnect;
+import com.thingmagic.SerialTransportTCP;
+import com.thingmagic.rfidreader.activities.ReaderActivity;
 import com.thingmagic.rfidreader.services.UsbService;
 import com.thingmagic.util.LoggerUtil;
 import com.thingmagic.util.Utilities;
+
+import java.net.URI;
+import java.util.Scanner;
 
 public class ConnectionListener implements View.OnClickListener {
 

@@ -2,10 +2,7 @@ package com.thingmagic.rfidreader.customViews;
 
 import java.util.ArrayList;
 
-import com.thingmagic.rfidreader.R;
-import com.thingmagic.rfidreader.R.id;
-import com.thingmagic.rfidreader.R.layout;
-
+import com.thingmagic.R;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

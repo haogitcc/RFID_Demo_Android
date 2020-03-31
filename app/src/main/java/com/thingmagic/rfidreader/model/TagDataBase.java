@@ -1,9 +1,7 @@
-package com.thingmagic.rfidreader;
+package com.thingmagic.rfidreader.model;
 
 import com.thingmagic.TagReadData;
-import com.thingmagic.util.LoggerUtil;
 
-import java.util.ArrayList;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class TagDataBase {

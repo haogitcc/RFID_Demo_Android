@@ -1,10 +1,9 @@
-package com.thingmagic.rfidreader;
+package com.thingmagic.rfidreader.model;
 
 import com.thingmagic.Reader;
 import com.thingmagic.ReaderUtil;
 import com.thingmagic.TagProtocol;
 import com.thingmagic.TagReadData;
-import com.thingmagic.util.LoggerUtil;
 
 import java.text.SimpleDateFormat;
 

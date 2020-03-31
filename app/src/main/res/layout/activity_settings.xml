@@ -22,7 +22,6 @@
                 android:background="@drawable/clean_cache_back_btn_image" />
 
             <TextView
-                android:id="@+id/custom_title_txt"
                 style="@style/titleBarText"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -32,7 +31,6 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/relativeLayoutBtns"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_marginBottom="4.0dip"

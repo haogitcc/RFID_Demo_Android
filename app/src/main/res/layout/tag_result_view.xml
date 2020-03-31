@@ -9,14 +9,12 @@
         android:orientation="vertical" >
 
         <TableLayout
-            android:id="@+id/tablelayoutHeader"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/table_style" >
 
             <TableRow
                 xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/tagResultHeader"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/table_style" >
@@ -67,7 +65,6 @@
                     android:textStyle="bold" />
                 <!--Rssi-->
                 <TextView
-                    android:id="@+id/RssiLabel"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_style"
@@ -79,7 +76,6 @@
                     android:visibility="gone"/>
                 <!--Frequency-->
                 <TextView
-                    android:id="@+id/FrequencyLabel"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_style"
@@ -91,7 +87,6 @@
                     android:visibility="gone"/>
                 <!--Phase-->
                 <TextView
-                    android:id="@+id/PhaseLabel"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_style"
@@ -114,7 +109,6 @@
                     android:textStyle="bold" />
                 <!--Gpio-->
                 <TextView
-                    android:id="@+id/GpioLabel"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_style"
@@ -126,7 +120,6 @@
                     android:visibility="gone"/>
                 <!--BrandIdentifier-->
                 <TextView
-                    android:id="@+id/BrandIdentifierLabel"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_style"
@@ -150,7 +143,6 @@
                     android:visibility="gone" />
                 <!--EPCMemData-->
                 <TextView
-                    android:id="@+id/EPCMemDataLabel"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_style"
@@ -162,7 +154,6 @@
                     android:visibility="gone"/>
                 <!--ReservedMemData-->
                 <TextView
-                    android:id="@+id/ReservedMemDataLabel"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_style"
@@ -174,7 +165,6 @@
                     android:visibility="gone"/>
                 <!--UserMemData-->
                 <TextView
-                    android:id="@+id/UserMemDataLabel"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_style"
@@ -186,7 +176,6 @@
                     android:visibility="gone"/>
                 <!--TIDMemData-->
                 <TextView
-                    android:id="@+id/TIDMemDataLabel"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/table_style"

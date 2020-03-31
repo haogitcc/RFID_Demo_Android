@@ -1,14 +1,13 @@
-package com.thingmagic.rfidreader;
-
+package com.thingmagic.rfidreader.services;
 
 import java.util.Set;
-
 import android.annotation.SuppressLint;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
-import android.content.Intent;
 import android.widget.Toast;
+
+import com.thingmagic.rfidreader.activities.ReaderActivity;
 
 @SuppressLint("NewApi")
 public class BluetoothService {

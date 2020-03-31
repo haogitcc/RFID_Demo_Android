@@ -27,10 +27,11 @@ import com.thingmagic.SimpleReadPlan;
 import com.thingmagic.TMConstants;
 import com.thingmagic.TagProtocol;
 import com.thingmagic.TagReadData;
-import com.thingmagic.rfidreader.R;
-import com.thingmagic.rfidreader.ReaderActivity;
-import com.thingmagic.rfidreader.TagDataBase;
-import com.thingmagic.rfidreader.TagReadRecord;
+
+import com.thingmagic.R;
+import com.thingmagic.rfidreader.activities.ReaderActivity;
+import com.thingmagic.rfidreader.model.TagDataBase;
+import com.thingmagic.rfidreader.model.TagReadRecord;
 import com.thingmagic.rfidreader.services.SettingsService;
 import com.thingmagic.util.LoggerUtil;
 import com.thingmagic.util.Utilities;

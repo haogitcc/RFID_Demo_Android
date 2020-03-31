@@ -19,7 +19,6 @@
             android:background="@drawable/title_background_img" >
 
             <ImageView
-                android:id="@+id/main_title_logo"
                 style="@style/main_title_text_img"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
@@ -160,7 +159,6 @@
                         android:visibility="gone" >
 
                         <RadioGroup
-                            android:id="@+id/search_radio_group"
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal" >

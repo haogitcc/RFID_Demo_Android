@@ -48,7 +48,6 @@ public class GlobalExceptionHandler implements Thread.UncaughtExceptionHandler {
 		mActivity.startActivity(i1);
 		 System.exit(0);// If you want to restart activity and want to kill
 		// after crash.s
-
 	}
 
 }

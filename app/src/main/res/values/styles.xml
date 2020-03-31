@@ -21,10 +21,7 @@
         <item name="android:src">@drawable/company_logo</item>
         <item name="android:background">@color/white</item>
     </style>
-    <style name="reader_search_img">
-        <item name="android:src">@drawable/reader_search</item>
-    </style>
-    
+
     <style name="titleBarText">
         <item name="android:textSize">20.0sp</item>
         <item name="android:textColor">@color/textColorPrimary</item>

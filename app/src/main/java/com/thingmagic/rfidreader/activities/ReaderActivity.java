@@ -1,4 +1,4 @@
-package com.thingmagic.rfidreader;
+package com.thingmagic.rfidreader.activities;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -19,12 +19,14 @@ import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.thingmagic.R;
 import com.thingmagic.Reader;
 import com.thingmagic.rfidreader.Listener.ConnectionListener;
 import com.thingmagic.rfidreader.Listener.ReaderSearchListener;
 import com.thingmagic.rfidreader.Listener.ServiceListener;
 import com.thingmagic.rfidreader.customViews.CustomEditText;
 import com.thingmagic.rfidreader.customViews.ExpandableListAdapter;
+import com.thingmagic.rfidreader.services.BluetoothService;
 import com.thingmagic.rfidreader.services.UsbService;
 import com.thingmagic.util.GlobalExceptionHandler;
 import com.thingmagic.util.LoggerUtil;

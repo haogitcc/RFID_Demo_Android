@@ -1,9 +1,7 @@
-package com.thingmagic;
+package com.thingmagic.util;
 
-import com.thingmagic.util.LoggerUtil;
-
-import android.util.Log;
-
+import com.thingmagic.Reader;
+import com.thingmagic.TMConstants;
 
 public class ReaderConnect {
 	private static String TAG = "ReaderConnect";
