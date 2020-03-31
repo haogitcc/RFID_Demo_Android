@@ -63,6 +63,13 @@ public class ServiceListener implements View.OnClickListener {
 	private static TextView total_tag_count = null;
 	private static TextView time_taken = null;
 
+	private static TextView rowNumberLabelView = null;
+	private static TextView epcEpcLabelView = null;
+	private static TextView epcAntLabelView = null;
+	private static TextView epcCountLabelView = null;
+	private static TextView epcDataLabelView = null;
+	private static TextView epcTimeLabelView = null;
+
 	private static LinearLayout antLayout = null;
 	private static CheckBox ant1CheckBox = null;
 	private static CheckBox ant2CheckBox = null;
@@ -115,6 +122,12 @@ public class ServiceListener implements View.OnClickListener {
 		unique_tag_count = (TextView) mReaderActivity.performance_metrics.findViewById(R.id.unique_tag_count);
 		total_tag_count = (TextView) mReaderActivity.performance_metrics.findViewById(R.id.total_tag_count);
 		time_taken = (TextView) mReaderActivity.performance_metrics.findViewById(R.id.time_taken);
+		rowNumberLabelView = (TextView) mReaderActivity.findViewById(R.id.NumberLabel);
+		epcEpcLabelView = (TextView) mReaderActivity.findViewById(R.id.EPCLabel);
+		epcAntLabelView = (TextView) mReaderActivity.findViewById(R.id.AntennaLabel);
+		epcCountLabelView = (TextView) mReaderActivity.findViewById(R.id.ReadConutLabel);
+		epcDataLabelView = (TextView) mReaderActivity.findViewById(R.id.DataLabel);
+		epcTimeLabelView = (TextView) mReaderActivity.findViewById(R.id.TimeStampLabel);
 
 		antLayout = (LinearLayout) mReaderActivity.findViewById(R.id.ant_layout);
 		ant1CheckBox = (CheckBox) mReaderActivity.findViewById(R.id.ant1_cbx);
@@ -496,29 +509,29 @@ public class ServiceListener implements View.OnClickListener {
 					epcNumbuer = (TextView) fullRow.findViewById(R.id.Number);
 					if (epcNumbuer != null) {
 						epcNumbuer.setText(String.valueOf(tagRecordData.getSerialNo()));
-						epcNumbuer.setWidth(mReaderActivity.rowNumberWidth);
+						epcNumbuer.setWidth(rowNumberLabelView.getWidth());
 
 						epcEPC = (TextView) fullRow.findViewById(R.id.EPC);
 						if (epcEPC != null) {
 							epcEPC.setText(tagRecordData.getEpcString());
-							epcEPC.setWidth(mReaderActivity.epcEpcWidth);
+							epcEPC.setWidth(epcEpcLabelView.getWidth());
 
 							epcAntenna = (TextView) fullRow.findViewById(R.id.Antenna);
 							if (epcAntenna != null) {
 								epcAntenna.setText(String.valueOf(tagRecordData.getAntenna()));
-								epcAntenna.setWidth(mReaderActivity.epcAntWidth);
+								epcAntenna.setWidth(epcAntLabelView.getWidth());
 							}
 
 							epcTime = (TextView) fullRow.findViewById(R.id.Time);
 							if (epcTime != null) {
 								epcTime.setText(String.valueOf(tagRecordData.getTimeStamp()));
-								epcTime.setWidth(mReaderActivity.epcTimeWidth);
+								epcTime.setWidth(epcTimeLabelView.getWidth());
 							}
 
 							epcReadCount = (TextView) fullRow.findViewById(R.id.ReadCount);
 							if (epcReadCount != null) {
 								epcReadCount.setText(String.valueOf(tagRecordData.getTagReadCount()));
-								epcReadCount.setWidth(mReaderActivity.epcCountWidth);
+								epcReadCount.setWidth(epcCountLabelView.getWidth());
 							}
 
 							if (isEmbeddedRead) {
@@ -526,7 +539,7 @@ public class ServiceListener implements View.OnClickListener {
 								if (epcData != null) {
 									epcData.setVisibility(View.VISIBLE);
 									epcData.setText(String.valueOf(tagRecordData.getData()));
-									epcData.setWidth(mReaderActivity.epcDataWidth);
+									epcData.setWidth(epcDataLabelView.getWidth());
 								}
 							}
 							table.addView(fullRow);

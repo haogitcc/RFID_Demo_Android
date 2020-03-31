@@ -18,8 +18,8 @@
     <!-- Table Header -->
     <string name="Number">#</string>
     <string name="EPC">EPC</string>
-    <string name="Antenna">Antenna</string>
-    <string name="TimeStamp">Time</string>
+    <string name="Antenna">Ant</string>
+    <string name="TimeStamp">TimeStamp</string>
     <string name="Rssi">Rssi</string>
     <string name="Phase">Phase</string>
     <string name="Frequency">Frequency</string>
