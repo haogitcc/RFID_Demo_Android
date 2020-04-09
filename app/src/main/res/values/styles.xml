@@ -13,12 +13,12 @@
     </style>
 
     <style name="header_title_background">
-        <item name="android:src">@drawable/title_background_img</item>
+        <item name="android:src">@drawable/title_green_background_img</item>
         
     </style>
     
     <style name="main_title_text_img">
-        <item name="android:src">@drawable/company_logo</item>
+        <item name="android:src">@drawable/fuwit_company_logo</item>
         <item name="android:background">@color/white</item>
     </style>
 

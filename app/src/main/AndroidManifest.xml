@@ -19,7 +19,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/jadaklogo"
+        android:icon="@drawable/fuwitlogo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
         android:largeHeap="true">

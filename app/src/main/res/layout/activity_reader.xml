@@ -16,7 +16,7 @@
             android:layout_width="fill_parent"
             android:layout_height="50dip"
             android:layout_alignParentTop="true"
-            android:background="@drawable/title_background_img" >
+            android:background="@drawable/title_green_background_img" >
 
             <ImageView
                 style="@style/main_title_text_img"
@@ -52,13 +52,13 @@
                 <LinearLayout
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="1dp"
-                        android:layout_marginTop="3dp" >
+                        android:layout_marginTop="3dp">
 
                         <com.thingmagic.rfidreader.customViews.CustomEditText
                             android:id="@+id/search_edit_text"
@@ -71,7 +71,7 @@
                             android:inputType="text"
                             android:text=""
                             android:textSize="15sp" />
-                        
+
                         <com.thingmagic.rfidreader.customViews.CustomEditText
                             android:id="@+id/custom_reader_field"
                             android:layout_width="0dp"
@@ -84,14 +84,14 @@
                             android:visibility="gone" />
 
                         <!--
-                             <TextView 
+                             <TextView
                             android:id="@+id/SerialList"
 							android:layout_width="0dp"
 						   	android:layout_height="wrap_content"
 						   	android:layout_weight="0.70"
                             android:padding="0sp"
 	                     	android:singleLine="false"
-						    android:text="very long text that will be wrapped to next line" 
+						    android:text="very long text that will be wrapped to next line"
 						    android:visibility="gone"/>
                         -->
 
@@ -126,29 +126,32 @@
                     <RadioGroup
                         android:id="@+id/Reader_radio_group"
                         android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:layout_height="20dp"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/NetworkReader_radio_button"
                             android:layout_width="wrap_content"
-                            android:layout_height="30dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="0.3"
                             android:checked="true"
                             android:text="@string/NetworkReader" />
 
                         <RadioButton
                             android:id="@+id/SerialReader_radio_button"
                             android:layout_width="wrap_content"
-                            android:layout_height="30dp"
+                            android:layout_height="20dp"
+                            android:layout_weight="0.3"
                             android:checked="false"
                             android:text="@string/SerialReader" />
-                      
+
                         <RadioButton
                             android:id="@+id/CustomReader_radio_button"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/CustomReader"
-                            android:checked="false" />
+                            android:layout_height="20dp"
+                            android:layout_weight="0.4"
+                            android:checked="false"
+                            android:text="@string/CustomReader" />
                     </RadioGroup>
 
                     <LinearLayout
@@ -156,12 +159,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:visibility="gone" >
+                        android:visibility="gone">
 
                         <RadioGroup
                             android:layout_width="fill_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal" >
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/SyncRead_radio_button"
@@ -177,12 +180,13 @@
                                 android:checked="false"
                                 android:text="@string/AsyncRead" />
                         </RadioGroup>
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="40dp"
                             android:orientation="horizontal"
                             android:paddingLeft="10dp"
-                            android:paddingRight="10dp" >
+                            android:paddingRight="10dp">
 
                             <Button
                                 android:id="@+id/Read_button"
@@ -210,34 +214,40 @@
                                 android:paddingRight="10dp"
                                 android:text="@string/Clear" />
                         </LinearLayout>
+
                         <LinearLayout
                             android:id="@+id/ant_layout"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Antenna"/>
+                                android:text="Antenna" />
+
                             <CheckBox
                                 android:id="@+id/ant1_cbx"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="1"/>
+                                android:text="1" />
+
                             <CheckBox
                                 android:id="@+id/ant2_cbx"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="2"/>
+                                android:text="2" />
+
                             <CheckBox
                                 android:id="@+id/ant3_cbx"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="3"/>
+                                android:text="3" />
+
                             <CheckBox
                                 android:id="@+id/ant4_cbx"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="4"/>
+                                android:text="4" />
                         </LinearLayout>
                     </LinearLayout>
 
@@ -246,7 +256,7 @@
                         android:layout_height="20dp"
                         android:orientation="horizontal"
                         android:paddingLeft="10dp"
-                        android:paddingRight="5dp" >
+                        android:paddingRight="5dp">
 
                         <TextView
                             android:id="@+id/search_result_view"
@@ -254,7 +264,8 @@
                             android:layout_height="fill_parent"
                             android:layout_gravity="left|bottom"
                             android:layout_weight="0.5"
-                            android:text="@string/Search_Result" />
+                            android:text="@string/Search_Result"
+                            android:textColor="@color/blue" />
 
                         <TextView
                             android:id="@+id/totalTagCount_view"
@@ -262,11 +273,12 @@
                             android:layout_height="fill_parent"
                             android:layout_gravity="left|bottom"
                             android:layout_weight="0.5"
-                            android:text="" />
+                            android:text=""
+                            android:textColor="@color/blue" />
                     </LinearLayout>
 
-                  <include layout="@layout/tag_result_view" />
-                  
+                    <include layout="@layout/tag_result_view" />
+
                 </LinearLayout>
             </RelativeLayout>
         </LinearLayout>
